@@ -89,7 +89,7 @@ trans = LA.Transformer(source_dir, output_dir, label_dir, num_images)
 
 经高斯噪声转换器处理后的图像会在其文件名后加入`_n`标识。
 
-### Resize(time, shuffle=True)
+### randomResize(time, shuffle=True)
 
 图像缩放转换器
 

@@ -211,7 +211,7 @@ class Transformer:
         for k in range(len(self.save_names)):
             self.save_names[k] += "_n"
 
-    def Resize(self, time, shuffle=True):
+    def randomResize(self, time, shuffle=True):
         """
         缩放图像
         :time 缩放倍数，>1 放大，<1 缩小
@@ -224,7 +224,7 @@ class Transformer:
         for i in range(len(self.images)):
             if shuffle:
                 time = random.uniform(*time)
-                self.images[i] = cv2.resize(self.images[i], (time * w, time * h))
+            self.images[i] = cv2.resize(self.images[i], (time * w, time * h))
 
         for k in range(len(self.save_names)):
             self.save_names[k] += "_res"
@@ -302,10 +302,10 @@ class Transformer:
             axes.add_patch(rec)
 
     def _sharpen(self, img):
-        image_blur = cv2.GaussianBlur(img, (3, 3), 0) 
+        image_blur = cv2.GaussianBlur(img, (3, 3), 0)
         Laplace_kernel = np.array(
             [[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]], dtype=np.float32
-        ) 
+        )
         laplace_image = cv2.filter2D(image_blur, -1, Laplace_kernel)
         return laplace_image
 
