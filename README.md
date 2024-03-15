@@ -4,6 +4,12 @@
 
 除此之外，`LocalAugment`在对图像变换的同时能够记录下数据集标签变换后的位置与大小，数据集标签采用矩形框中心点与长宽的定位模式，能够保证图像在经过变换后，标签依然能够被正确地定位，省去转换后手动打标签的繁琐工作。
 
+## install
+
+```sh
+pip install local-augment
+```
+
 ## Quickly Start
 
 ```python
@@ -28,7 +34,6 @@ trans = LA.Transformer(source_dir, output_dir, label_dir, num_images)
 - `crop_size: tuple(int)` 矩形裁剪的尺寸，具体到图像上的像素坐标，以 tuple 结构输入，依次存储为`(x1, x2, y1, y2)`，采用矩形左上角和右下角的坐标定位。
 
 经裁剪转换器处理后的图像会在其文件名后加入`_c`标识。
-
 
 ### Rotate(angle, shuffle=True)
 

@@ -1,17 +1,13 @@
 import setuptools
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
 setuptools.setup(
-    name="LocalAugment",
+    name="local-augment",
     version="0.0.1",
+    license="MIT license",
     author="TayDream",
     author_email="19859860010@163.com",
     description="A package for local data augmentation in deep learning",
-    long_description=long_description,
-    long_description_content_type="markdown",
-    url="",
+    url="https://github.com/dream-oyh/LocalAugment",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",
