@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "localAugment"
+version = "0.2.1"
+description = "a package for local images augment in deep learning"
+authors = ["dream同学0 <1399541701@qq.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+opencv-python = "^4.9.0.80"
+matplotlib = "^3.8.3"
+pandas = "^2.2.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
